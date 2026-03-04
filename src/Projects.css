@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.projects{
+    padding: 80px 5%;
+    min-height: 100vh;
+    background-color: #f8f9fa;
+    width: 100%;
+    justify-content: center;
+}
+.project-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0b2c5f;
+}
+.project-card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    box-sizing: border-box;
+    gap : 30px;
+    width: 95%;
+    max-width: 1100px;
+    transition: transform 0.3s ease; 
+    padding: 10px 20px;
+    margin: 20px auto; /* Centers the card */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.project-left {
+  flex: 0 0 auto;
+  margin: 20px;
+}
+.project-left img {
+  max-width: 150px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.project-right {
+  flex: 1;
+  min-width: 0;
+}
+.project-right h3 {
+  padding-top: 10px;
+  font-size: 28px;
+  color: #222;
+}
+.project-right h4 {
+  padding-top: 13px;
+  font-size: 32px;
+  color:rgb(15, 15, 159)
+}
+.btn {
+    margin: 20px;
+    background: linear-gradient(45deg, #3a0ca3, #4361ee);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}

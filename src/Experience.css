@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.experience{
+    padding: 80px 5%;
+    min-height: 100vh;
+    background-color: #c6e4e9;
+    width: 100%;
+    justify-content: center;
+}
+.experience-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0b2c5f;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The Vertical Center Line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #0b2c5f; /* Dark Blue Line */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%; /* Each side takes half width */
+}
+
+/* The Orange Boxes */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: #f39c12; /* Orange background */
+  position: relative;
+  border-radius: 10px;
+  color: #000;
+}
+.timeline-content h3{
+    font-size: 20px;
+}
+/* Alignment Logic */
+.left { left: 0; text-align: right; }
+.right { left: 50%; text-align: left; }
+
+/* The Center Dots (Icons) */
+.timeline-dot {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: -20px; /* Positioned on the center line */
+  background-color: #fff;
+  border: 4px solid #f39c12;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0b2c5f;
+}
+
+.right .timeline-dot {
+  left: -20px;
+}
+
+/* The Arrows pointing to the line */
+.timeline-content::after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  border: medium solid #f39c12;
+}
+
+.left .timeline-content::after {
+  right: -10px;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent #f39c12;
+}
+
+.right .timeline-content::after {
+  left: -10px;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #f39c12 transparent transparent;
+}
+
+@media screen and (max-width: 768px) {
+  /* Move line to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+  /* Full width for all items */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Force everything to behave like a 'right' item */
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-dot {
+    left: 15px !important;
+  }
+
+  .timeline-content::after {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #f39c12 transparent transparent;
+  }
+}

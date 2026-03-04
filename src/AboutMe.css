@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about{
+    padding: 80px 5%;
+    min-height: 100vh;
+    background-color: #dde7f1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-title {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 60px;
+  color: #0b2c5f;
+}
+.about-title span {
+  color: #e10600;
+}
+.about-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 200px;
+  max-width: 1100px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.about-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex;
+}
+.about-left img {
+  max-width: 350px;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.about-right {
+  flex: 1.5;
+  max-width: 1200px;
+}
+.about-right h3 {
+  font-size: 35px;
+  color: #222;
+}
+.about-role {
+  font-size: 30px;
+  color: #0b2c5f;
+  margin-bottom: 20px;
+}
+.about-right p {
+  font-size: clamp(18px, 2vw, 22px);
+  text-align:justify;
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 100%;
+  color: #444;
+}
+.about-contact{
+    font-size: 16px;
+}
+.about-contact span {
+  color: #4361ee;
+  font-weight: bold;
+}
+.detail-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#dde7f1;
+}
+
+.detail-left {
+    flex: 1;
+    max-width: 600px;
+}
+.detail-right{
+    flex: 1;
+    display: flex;
+}
+
+.btn {
+    margin-top: 30px;
+    padding: 12px 28px;
+    background: linear-gradient(45deg, #3a0ca3, #4361ee);
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column; /* Stacks the image on top of text */
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .about-left img {
+    width: 280px; /* Slightly smaller image for mobile */
+  }
+
+  .about-right {
+    text-align: center; /* Centers text for better mobile look */
+  }
+}
