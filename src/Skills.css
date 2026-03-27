@@ -42,7 +42,7 @@
 }
 
 .skill-card:hover{
-    transform: translateY(-10px);
+    transform: scale(1.05);
 }
 .skill-card img{
     width: 120px;

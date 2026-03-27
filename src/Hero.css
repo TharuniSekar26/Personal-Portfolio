@@ -38,12 +38,15 @@
     background: linear-gradient(45deg, #3a0ca3, #4361ee);
     border: none;
     border-radius: 30px;
-    color: white;
-    font-size: 16px;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.btn a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 .social-icons {
     display: flex;
     gap: 15px;
@@ -66,4 +69,22 @@
   width: 400px;
   border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column; /* stack vertically */
+        text-align: center;
+    }
+    .hero-left h1 {
+        font-size: 32px;
+    }
+    .hero-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
 }

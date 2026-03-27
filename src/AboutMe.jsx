@@ -2,7 +2,7 @@ import profile from './assets/profile.jpeg';
 import './AboutMe.css';
 function AboutMe() {
     return (
-        <section className="about">
+        <section id="about" className="about">
             <h2 className="about-title">
                 <i className="bi bi-person-fill"></i> About <span>Me</span>
             </h2>

@@ -2,7 +2,7 @@ import './Education.css'
 import krct from './assets/krct.jpg'
 function Education() {
   return (
-     <section className='education'>
+     <section id="education" className='education'>
         <h2 className='education-title'>
             <i className="bi bi-mortarboard-fill"> </i><span>Education</span>
         </h2>

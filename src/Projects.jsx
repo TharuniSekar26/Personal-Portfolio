@@ -2,7 +2,7 @@ import './Projects.css';
 import portfolio from './assets/portfolio.jpg'
 function Projects() {
     return (
-        <section className='projects'>
+        <section id="projects" className='projects'>
             <h2 className='project-title'>
                 <i className='bi bi-laptop'></i>  My <span>Projects</span>
             </h2>

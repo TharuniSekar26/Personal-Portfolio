@@ -1,15 +1,8 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.experience {
+  padding: 80px 5%;
+  background: #c6e4e9;
 }
-.experience{
-    padding: 80px 5%;
-    min-height: 100vh;
-    background-color: #c6e4e9;
-    width: 100%;
-    justify-content: center;
-}
+
 .experience-title {
   text-align: center;
   font-size: 36px;
@@ -17,115 +10,109 @@
   color: #0b2c5f;
 }
 
+/* Timeline Container */
 .timeline {
   position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* The Vertical Center Line */
+/* Center Line */
 .timeline::after {
   content: '';
   position: absolute;
-  width: 6px;
-  background-color: #0b2c5f; /* Dark Blue Line */
+  width: 4px;
+  background: #0b2c5f;
   top: 0;
   bottom: 0;
   left: 50%;
-  margin-left: -3px;
+  transform: translateX(-50%);
+}
+
+/* Timeline Item */
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+}
+
+/* Left & Right positioning */
+.timeline-item.left {
+  left: 0;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+/* Content Box */
+.timeline-content {
+  background: #f39c12;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+/* Dot */
+.timeline-dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 4px solid #f39c12;
+  border-radius: 50%;
+  top: 20px;
+  right: -10px;
+  z-index: 1;
+}
+
+.timeline-item.right .timeline-dot {
+  left: -10px;
+}
+
+/* Text */
+.timeline-content h3 {
+  margin-bottom: 5px;
+}
+
+.timeline-content h4 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.timeline-content p {
+  font-size: 14px;
+}
+
+/* 🔥 FIX: Prevent overflow */
+.timeline::after {
+  pointer-events: none;
 }
 
 .timeline-item {
-  padding: 10px 40px;
-  position: relative;
-  width: 50%; /* Each side takes half width */
+  box-sizing: border-box;
 }
 
-/* The Orange Boxes */
-.timeline-content {
-  padding: 20px 30px;
-  background-color: #f39c12; /* Orange background */
-  position: relative;
-  border-radius: 10px;
-  color: #000;
-}
-.timeline-content h3{
-    font-size: 20px;
-}
-/* Alignment Logic */
-.left { left: 0; text-align: right; }
-.right { left: 50%; text-align: left; }
+/* ✅ Responsive */
+@media (max-width: 768px) {
 
-/* The Center Dots (Icons) */
-.timeline-dot {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  right: -20px; /* Positioned on the center line */
-  background-color: #fff;
-  border: 4px solid #f39c12;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #0b2c5f;
-}
-
-.right .timeline-dot {
-  left: -20px;
-}
-
-/* The Arrows pointing to the line */
-.timeline-content::after {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  border: medium solid #f39c12;
-}
-
-.left .timeline-content::after {
-  right: -10px;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent #f39c12;
-}
-
-.right .timeline-content::after {
-  left: -10px;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent #f39c12 transparent transparent;
-}
-
-@media screen and (max-width: 768px) {
-  /* Move line to the left */
   .timeline::after {
-    left: 31px;
+    left: 20px;
   }
 
-  /* Full width for all items */
   .timeline-item {
     width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+    padding-left: 60px;
+    padding-right: 20px;
+    margin-bottom: 30px;
   }
 
-  /* Force everything to behave like a 'right' item */
-  .timeline-item.left, .timeline-item.right {
+  .timeline-item.right {
     left: 0;
-    text-align: left;
   }
 
   .timeline-dot {
-    left: 15px !important;
-  }
-
-  .timeline-content::after {
-    left: -10px;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent #f39c12 transparent transparent;
+    left: 10px;
+    right: auto;
   }
 }

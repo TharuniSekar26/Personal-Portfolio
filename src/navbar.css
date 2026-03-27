@@ -9,6 +9,7 @@
     box-sizing: border-box;
     background-color: whitesmoke;
     font-family: Arial, Helvetica, sans-serif;
+    z-index: 1000;  /* 🔥 add this */
 }
 
 .logo {
@@ -34,6 +35,12 @@
     color: #2563eb;
 }
 
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -43,17 +50,18 @@
     cursor: pointer;
 }
 
-.nav-links li {
+.nav-links li a{
     color: #333;
     transition: 0.3s;
+    text-decoration: none;
 }
 
-.nav-links li:hover {
+.nav-links li a:hover {
     color: #2563eb;
 }
 
 .active {
-    color: #2563eb;
+    color: #2535eb;
     font-weight: bold;
     border-bottom: 2px solid #2563eb;
     padding-bottom: 4px;
@@ -63,7 +71,21 @@
 
     /* Navbar stacking / Menu Icon */
     .nav-links {
-        display: none; /* Hide standard links */
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 100%;
+        background-color: whitesmoke;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+
+        display: none; /* hidden by default */
+    }
+
+    .nav-links.open {
+        display: flex; /* show when clicked */
     }
     
     .menu-icon {

@@ -1,7 +1,7 @@
 import './Skills.css';
 function Skill() {
   return (
-    <section className='skill'>
+    <section id="skills" className='skill'>
         <h2 className='skills-title'>
             <i className='bi bi-laptop'></i> Skills & <span>Technology</span>
         </h2>
@@ -43,16 +43,8 @@ function Skill() {
                 <span>Data Structures</span>
             </div>
             <div className='skill-card'>
-                <img src='https://www.vectorlogo.zone/logos/microsoft_office/microsoft_office-icon.svg' alt="Python" />
-                <span>MS Office</span>
-            </div>
-            <div className='skill-card'>
                 <img src='https://cdn-icons-png.flaticon.com/512/3254/3254050.png' alt="Python" />
                 <span>Problem Solving</span>
-            </div>
-            <div className='skill-card'>
-                <img src='https://cdn-icons-png.flaticon.com/512/12104/12104975.png' alt="Python" />
-                <span>LLM & RAG</span>
             </div>
         </div>
     </section>
